@@ -1,13 +1,14 @@
-function callbackFn() {
-    console.log('Callback function called!');
-}
-const duration = 500;
-
 console.log('start of script');
-// setTimeout(callbackFn, duration);
-const id = setInterval(callbackFn, duration);
-console.log('end of script');
 
-setTimeout(() => {
-    clearInterval(id);
-}, 5000);
+var setDelayedExecution = function (callbackFn, duration) {
+    const startTime = Date.now();
+    while (Date.now() - startTime <= duration);
+    callbackFn();
+};
+
+var callbackFn = function () {
+    console.log('Callback function called at', new Date());
+};
+const duration = 5000;
+setTimeout(callbackFn, duration);
+console.log('end of script');

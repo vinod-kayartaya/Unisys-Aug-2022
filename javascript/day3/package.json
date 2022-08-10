@@ -1,0 +1,29 @@
+{
+    "name": "myapp",
+    "version": "1.0.0",
+    "description": "a sample nodejs project",
+    "main": "ex36.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vinod-kayartaya/myapp.git"
+    },
+    "keywords": [
+        "sample",
+        "node",
+        "project"
+    ],
+    "author": "Vinod <vinod@vinod.co>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/vinod-kayartaya/myapp/issues"
+    },
+    "homepage": "https://github.com/vinod-kayartaya/myapp#readme",
+    "dependencies": {
+        "axios": "^0.27.2",
+        "jquery": "^3.6.0",
+        "lodash": "^4.17.21"
+    }
+}
