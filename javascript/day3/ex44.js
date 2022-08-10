@@ -12,9 +12,8 @@ btnSearch.onclick = async function () {
     const resp = await fetch(url);
     const data = await resp.json();
     const titles = data.Search.map((m) => m.Title);
-    let output = '<ul>';
-    titles.forEach((t) => (output += '<li>' + t + '</li>'));
-    output += '</ul>';
-    // console.log(output);
+    let output = titles.map((t) => `<li>${t}</li>`).join('');
+    output = `<ul>${output}</ul>`;
+
     document.getElementById('output').innerHTML = output;
 };
