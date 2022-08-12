@@ -5,7 +5,7 @@ export class TodoEntry extends Component {
         // the props received from the parent component is READ-ONLY
         // We get a local copy of the prop and changing the value of this local copy
         // does not change the data in the parent
-        let { todo, toggleTodoDone } = this.props;
+        let { todo, toggleTodoDone, deleteTodo } = this.props;
 
         return (
             <>
@@ -15,9 +15,17 @@ export class TodoEntry extends Component {
                         textDecoration: todo.done ? 'line-through' : 'none',
                         cursor: 'default',
                     }}
-                    onClick={() => toggleTodoDone(todo.id)}
                 >
-                    {todo.text}
+                    <button
+                        onClick={() => deleteTodo(todo.id)}
+                        className='btn btn-outline-danger'
+                    >
+                        x
+                    </button>
+
+                    <span onClick={() => toggleTodoDone(todo.id)}>
+                        {todo.text}
+                    </span>
                 </li>
             </>
         );
