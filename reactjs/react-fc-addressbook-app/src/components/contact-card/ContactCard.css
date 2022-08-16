@@ -1,0 +1,8 @@
+.trash {
+    display: none;
+    cursor: pointer;
+}
+
+.card:hover .trash {
+    display: inline;
+}
