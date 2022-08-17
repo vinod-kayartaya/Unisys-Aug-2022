@@ -13,8 +13,8 @@ const ContactForm = ({ addContact }) => {
     });
     const firstnameRef = useRef();
 
-    const changeHandler = ({ target }) => {
-        const { name, value } = target;
+    const changeHandler = (evt) => {
+        const { name, value } = evt.target;
         setContact({ ...contact, [name]: value });
     };
 
@@ -85,6 +85,7 @@ const ContactForm = ({ addContact }) => {
                                 id='genderMale'
                                 value='Male'
                                 defaultChecked
+                                onChange={changeHandler}
                             />
                             Male
                         </label>
@@ -95,6 +96,7 @@ const ContactForm = ({ addContact }) => {
                                 className='form-check-input'
                                 id='genderFemale'
                                 value='Female'
+                                onChange={changeHandler}
                             />
                             Female
                         </label>
