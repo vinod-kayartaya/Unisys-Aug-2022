@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import './App.css';
 import Header from './components/Header';
 import TodoList from './components/TodoList';
-import './App.css';
 import TodoForm from './components/TodoForm';
 
 export class App extends Component {
