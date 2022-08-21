@@ -18,6 +18,7 @@ const MovieCard = ({ movie }) => {
                     </p>
                 </div>
                 <img
+                    style={{ height: '400px', objectFit: 'cover' }}
                     src={movie.Poster}
                     alt={movie.Title}
                     className='card-img-top'

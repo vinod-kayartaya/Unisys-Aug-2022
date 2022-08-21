@@ -39,7 +39,7 @@ const MovieList = () => {
     }, [page]);
 
     const moviesJsx = moviesData.map((m) => (
-        <div key={m.imdbID} className='col-md-3 col-sm-6 col-xs-12'>
+        <div key={m.imdbID} className='col-md-4 col-sm-6 col-xs-12'>
             <MovieCard movie={m} />
         </div>
     ));
